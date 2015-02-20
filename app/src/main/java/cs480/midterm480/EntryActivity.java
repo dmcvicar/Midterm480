@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -41,7 +42,7 @@ public class EntryActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onSubmit() {
+    public void onSubmit(View view) {
         Intent intent = new Intent(this, DisplayActivity.class);
         EditText text = (EditText)findViewById(R.id.edit1);
         intent.putExtra("1", text.getText().toString());
