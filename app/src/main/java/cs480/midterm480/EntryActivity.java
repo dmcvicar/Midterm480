@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 
 public class EntryActivity extends ActionBarActivity {
@@ -43,14 +45,20 @@ public class EntryActivity extends ActionBarActivity {
         Intent intent = new Intent(this, DisplayActivity.class);
         EditText text = (EditText)findViewById(R.id.edit1);
         intent.putExtra("1", text.getText().toString());
+
         text = (EditText)findViewById(R.id.edit2);
         intent.putExtra("2", text.getText().toString());
+
         text = (EditText)findViewById(R.id.edit3);
         intent.putExtra("3", text.getText().toString());
+
         text = (EditText)findViewById(R.id.edit4);
         intent.putExtra("4", text.getText().toString());
-        text = (EditText)findViewById(R.id.edit5);
-        intent.putExtra("5", text.getText().toString());
+
+        RadioGroup buttons = (RadioGroup)findViewById(R.id.gender_buttons);
+        RadioButton checkedButton = (RadioButton)findViewById(buttons.getCheckedRadioButtonId());
+        intent.putExtra("5", checkedButton.getText().toString());
+
         text = (EditText)findViewById(R.id.edit6);
         intent.putExtra("6", text.getText().toString());
         startActivity(intent);

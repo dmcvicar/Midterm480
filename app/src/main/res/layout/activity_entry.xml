@@ -37,6 +37,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:id="@+id/edit2"/>
 
         <TextView
@@ -61,6 +62,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:id="@+id/edit4"/>
 
         <TextView
@@ -70,10 +72,25 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/text5"/>
 
-        <EditText
+        <RadioGroup
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edit5"/>
+            android:orientation="horizontal"
+            android:id="@+id/gender_buttons">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:id="@+id/male_button"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:id="@+id/female_button"/>
+
+        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,6 +102,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:inputType="phone"
             android:id="@+id/edit6"/>
 
         <Button

@@ -6,9 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-/**
- * Created by davidmcvicar on 2/20/15.
- */
 public class DisplayActivity extends ActionBarActivity {
 
     @Override

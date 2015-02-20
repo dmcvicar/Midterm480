@@ -2,13 +2,16 @@
 <resources>
 
     <string name="app_name">Dave McVicar's Midterm</string>
-    <string name="display_label">Your Entries</string>
+    <string name="display_label">Summary</string>
     <string name="action_settings">Settings</string>
-    <string name="text1">Text 1:</string>
-    <string name="text2">Text 2:</string>
-    <string name="text3">Text 3:</string>
-    <string name="text4">Text 4:</string>
-    <string name="text5">Text 5:</string>
-    <string name="text6">Text 6:</string>
+    <string name="text1">Name:</string>
+    <string name="text2">eID:</string>
+    <string name="text3">Major:</string>
+    <string name="text4">Graduation Year:</string>
+    <string name="text5">Gender:</string>
+    <string name="text6">Phone:</string>
     <string name="submit">Submit</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
 </resources>
