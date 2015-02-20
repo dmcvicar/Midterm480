@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 
 public class EntryActivity extends ActionBarActivity {
@@ -39,7 +40,19 @@ public class EntryActivity extends ActionBarActivity {
     }
 
     public void onSubmit() {
-        Intent intent = new Intent();
+        Intent intent = new Intent(this, DisplayActivity.class);
+        EditText text = (EditText)findViewById(R.id.edit1);
+        intent.putExtra("1", text.getText().toString());
+        text = (EditText)findViewById(R.id.edit2);
+        intent.putExtra("2", text.getText().toString());
+        text = (EditText)findViewById(R.id.edit3);
+        intent.putExtra("3", text.getText().toString());
+        text = (EditText)findViewById(R.id.edit4);
+        intent.putExtra("4", text.getText().toString());
+        text = (EditText)findViewById(R.id.edit5);
+        intent.putExtra("5", text.getText().toString());
+        text = (EditText)findViewById(R.id.edit6);
+        intent.putExtra("6", text.getText().toString());
         startActivity(intent);
     }
 }

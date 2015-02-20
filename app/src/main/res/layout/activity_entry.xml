@@ -24,7 +24,8 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/edit1"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,7 +36,8 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/edit2"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,7 +48,8 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/edit3"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,7 +60,8 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/edit4"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,7 +72,8 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/edit5"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,12 +84,14 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/edit6"/>
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/submit"/>
+            android:text="@string/submit"
+            android:onClick="onSubmit" />
 
     </LinearLayout>
 </ScrollView>

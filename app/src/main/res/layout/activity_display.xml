@@ -9,7 +9,94 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
     style="@style/AppTheme">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linear_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/label1"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/text1"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/label2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/text2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/label3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/text3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/label4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/text4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/label5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/text5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/label6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/text6"/>
+    </LinearLayout>
 </ScrollView>
