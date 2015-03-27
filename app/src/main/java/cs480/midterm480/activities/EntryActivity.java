@@ -10,7 +10,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.sql.SQLException;
+
 import cs480.midterm480.R;
+import cs480.midterm480.db.StudentDataSource;
 
 
 public class EntryActivity extends ActionBarActivity {
@@ -46,18 +49,27 @@ public class EntryActivity extends ActionBarActivity {
 
     public void onSubmit(View view) {
 
+        StudentDataSource dataSource = new StudentDataSource(getApplicationContext());
+
+        try {
+            dataSource.open();
+        } catch (SQLException sqle) {}
+
         EditText text = (EditText)findViewById(R.id.edit1);
-        intent.putExtra("1", text.getText().toString());
+        String name = text.getText().toString();
 
         text = (EditText)findViewById(R.id.edit2);
-        intent.putExtra("2", text.getText().toString());
+        int eid = Integer.parseInt(text.getText().toString());
 
         text = (EditText)findViewById(R.id.edit3);
-        intent.putExtra("3", text.getText().toString());
+        String major = text.getText().toString();
 
         RadioGroup buttons = (RadioGroup)findViewById(R.id.gender_buttons);
         RadioButton checkedButton = (RadioButton)findViewById(buttons.getCheckedRadioButtonId());
-        intent.putExtra("4", checkedButton.getText().toString());
+        String gender = checkedButton.getText().toString();
+
+        dataSource.createStudent(name,eid,major,gender);
+        dataSource.close();
 
     }
 
