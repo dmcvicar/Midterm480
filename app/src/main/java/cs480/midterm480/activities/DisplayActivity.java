@@ -1,10 +1,12 @@
-package cs480.midterm480;
+package cs480.midterm480.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import cs480.midterm480.R;
 
 public class DisplayActivity extends ActionBarActivity {
 

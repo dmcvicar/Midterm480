@@ -1,4 +1,4 @@
-package cs480.midterm480;
+package cs480.midterm480.activities;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import cs480.midterm480.R;
 
 
 public class EntryActivity extends ActionBarActivity {
@@ -43,7 +45,7 @@ public class EntryActivity extends ActionBarActivity {
     }
 
     public void onSubmit(View view) {
-        Intent intent = new Intent(this, DisplayActivity.class);
+
         EditText text = (EditText)findViewById(R.id.edit1);
         intent.putExtra("1", text.getText().toString());
 
@@ -53,15 +55,16 @@ public class EntryActivity extends ActionBarActivity {
         text = (EditText)findViewById(R.id.edit3);
         intent.putExtra("3", text.getText().toString());
 
-        text = (EditText)findViewById(R.id.edit4);
-        intent.putExtra("4", text.getText().toString());
-
         RadioGroup buttons = (RadioGroup)findViewById(R.id.gender_buttons);
         RadioButton checkedButton = (RadioButton)findViewById(buttons.getCheckedRadioButtonId());
-        intent.putExtra("5", checkedButton.getText().toString());
+        intent.putExtra("4", checkedButton.getText().toString());
 
-        text = (EditText)findViewById(R.id.edit6);
-        intent.putExtra("6", text.getText().toString());
+    }
+
+    public void onDisplay(View view) {
+
+        Intent intent = new Intent(this, DisplayActivity.class);
         startActivity(intent);
+
     }
 }

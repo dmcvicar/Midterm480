@@ -7,10 +7,9 @@
     <string name="text1">Name:</string>
     <string name="text2">eID:</string>
     <string name="text3">Major:</string>
-    <string name="text4">Graduation Year:</string>
-    <string name="text5">Gender:</string>
-    <string name="text6">Phone:</string>
+    <string name="text4">Gender:</string>
     <string name="submit">Submit</string>
+    <string name="display">Display Data</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
 
