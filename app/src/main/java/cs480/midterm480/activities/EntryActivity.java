@@ -49,7 +49,7 @@ public class EntryActivity extends ActionBarActivity {
 
     public void onSubmit(View view) {
 
-        StudentDataSource dataSource = new StudentDataSource(getApplicationContext());
+        StudentDataSource dataSource = new StudentDataSource(this);
 
         try {
             dataSource.open();

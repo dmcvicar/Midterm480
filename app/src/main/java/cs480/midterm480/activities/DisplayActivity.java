@@ -4,9 +4,13 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import java.sql.SQLException;
+import java.util.List;
 
 import cs480.midterm480.R;
+import cs480.midterm480.db.Student;
+import cs480.midterm480.db.StudentDataSource;
 
 public class DisplayActivity extends ActionBarActivity {
 
@@ -14,7 +18,15 @@ public class DisplayActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
-        setTextViews();
+
+        StudentDataSource dataSource = new StudentDataSource(this);
+        try { dataSource.open(); } catch(SQLException sqle){};
+
+        List<Student> students = dataSource.getAllStudents();
+
+
+        //@TODO display data in a list using the
+
     }
 
 
@@ -40,18 +52,5 @@ public class DisplayActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void setTextViews() {
-        TextView textView = (TextView)findViewById(R.id.text1);
-        textView.setText(getIntent().getStringExtra("1"));
-        textView = (TextView)findViewById(R.id.text2);
-        textView.setText(getIntent().getStringExtra("2"));
-        textView = (TextView)findViewById(R.id.text3);
-        textView.setText(getIntent().getStringExtra("3"));
-        textView = (TextView)findViewById(R.id.text4);
-        textView.setText(getIntent().getStringExtra("4"));
-        textView = (TextView)findViewById(R.id.text5);
-        textView.setText(getIntent().getStringExtra("5"));
-        textView = (TextView)findViewById(R.id.text6);
-        textView.setText(getIntent().getStringExtra("6"));
-    }
+
 }
