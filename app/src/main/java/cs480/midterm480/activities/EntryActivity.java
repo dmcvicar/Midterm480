@@ -59,7 +59,7 @@ public class EntryActivity extends ActionBarActivity {
         String name = text.getText().toString();
 
         text = (EditText)findViewById(R.id.edit2);
-        int eid = Integer.parseInt(text.getText().toString());
+        String eid = text.getText().toString();
 
         text = (EditText)findViewById(R.id.edit3);
         String major = text.getText().toString();
@@ -70,6 +70,11 @@ public class EntryActivity extends ActionBarActivity {
 
         dataSource.createStudent(name,eid,major,gender);
         dataSource.close();
+
+        ((EditText)(findViewById(R.id.edit1))).setText("");
+        ((EditText)(findViewById(R.id.edit2))).setText("");
+        ((EditText)(findViewById(R.id.edit3))).setText("");
+        buttons.check(R.id.male_button);
 
     }
 

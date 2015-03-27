@@ -1,9 +1,11 @@
 package cs480.midterm480.activities;
 
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -12,7 +14,7 @@ import cs480.midterm480.R;
 import cs480.midterm480.db.Student;
 import cs480.midterm480.db.StudentDataSource;
 
-public class DisplayActivity extends ActionBarActivity {
+public class DisplayActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +26,9 @@ public class DisplayActivity extends ActionBarActivity {
 
         List<Student> students = dataSource.getAllStudents();
 
-
-        //@TODO display data in a list using the
+        ArrayAdapter<Student> adapter = new ArrayAdapter<Student>(this,
+                android.R.layout.simple_list_item_1, students);
+        setListAdapter(adapter);
 
     }
 

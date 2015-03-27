@@ -1,5 +1,7 @@
 package cs480.midterm480.db;
 
+import java.util.ArrayList;
+
 /**
  * Created by davidmcvicar on 3/27/15.
  */
@@ -7,8 +9,9 @@ public class Student {
 
     private int id;
     private String name;
-    private int eid;
+    private String eid;
     private String major;
+    private String gender;
 
     public int getId() {
         return id;
@@ -26,11 +29,11 @@ public class Student {
         this.name = name;
     }
 
-    public int getEid() {
+    public String getEid() {
         return eid;
     }
 
-    public void setEid(int eid) {
+    public void setEid(String eid) {
         this.eid = eid;
     }
 
@@ -50,6 +53,8 @@ public class Student {
         this.gender = gender;
     }
 
-    private String gender;
+    public String toString() {
+        return name + " | " + eid + " | " + major + " | " + gender;
+    }
 
 }

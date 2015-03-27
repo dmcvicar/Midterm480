@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper{
 
     public static final String TABLE_STUDENTS = "students";
-    public static final String COLUMN_ID = "_id";
+    public static final String COLUMN_ID = "rowid";
     public static final String COLUMN_NAME = "name";
     public static final String COLUMN_EID = "eid";
     public static final String COLUMN_MAJOR = "major";
@@ -19,9 +19,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_CREATE =
             "CREATE TABLE " + TABLE_STUDENTS
-          + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMEMNT, "
+          + "(" + COLUMN_ID + " INTEGER PRIMARY KEY, "
           + COLUMN_NAME + " TEXT NOT NULL, "
-          + COLUMN_EID + " INTEGER NOT NULL, "
+          + COLUMN_EID + " TEXT NOT NULL, "
           + COLUMN_MAJOR + " TEXT NOT NULL, "
           + COLUMN_GENDER + " TEXT NOT NULL);";
 

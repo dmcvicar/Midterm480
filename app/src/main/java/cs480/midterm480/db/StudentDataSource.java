@@ -27,7 +27,7 @@ public class StudentDataSource {
         helper.close();
     }
 
-    public Student createStudent(String name, int eid, String major, String gender) {
+    public Student createStudent(String name, String eid, String major, String gender) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_NAME,name);
         values.put(MySQLiteHelper.COLUMN_EID,eid);
@@ -69,7 +69,7 @@ public class StudentDataSource {
         Student student = new Student();
         student.setId(cursor.getInt(0));
         student.setName(cursor.getString(1));
-        student.setEid(cursor.getInt(2));
+        student.setEid(cursor.getString(2));
         student.setMajor(cursor.getString(3));
         student.setGender(cursor.getString(4));
         return student;
